@@ -1,4 +1,6 @@
 import math  
+import datetime
+import json
 #-------------------------------------------------
 # # List Sort
 # d = [12, 2, 3, 4, 5]
@@ -278,11 +280,73 @@ import math
 
 # XARGS -> Mit Methoden multiple Argumente benutzen
 
-def multiply(*numbers):   # es wird quasi eine List an Argumenten übergeben, deswegen das Asterix als Platzhalter.
-    total = 1
-    for number in numbers:
-        total *= number
-    return total
+# def multiply(*numbers):   # es wird quasi eine List an Argumenten übergeben, deswegen das Asterix als Platzhalter.
+#     total = 1
+#     for number in numbers:
+#         total *= number
+#     return total
 
-print(multiply(2,3,4,5))
+# print(multiply(2,3,4,5))
+
+#-------------------------------------------------
+
+# Datetime Bearbeitung ,dazu muß man datetime importieren
+
+# time = datetime.datetime
+# print(time.now())
+
+# weekday = datetime.datetime.now()
+# print(weekday.strftime('%A'))   # gibt den Tag an alr Reinname wie z.B. Monday, Tuesday etc.
+
+# month = datetime.datetime.now()
+# print(month.strftime('%B'))  # gibt den Monat aus (full version) wie z.B. May, June, July etc.
+
+# x = datetime.datetime(2024, 8, 20)
+# print(x.strftime('%d'))   # gibt den Tag an. Das Format ist ja YYYY,MM,dd. Mit dem % werden die anderen Werte gescliced.
+
+#-------------------------------------------------
+
+# Weitere Math-Funktionen
+
+# print(max(5,10,25))
+# print(pow(2,3))   # 2 hoch 3, also potenzieren
+# print(math.sqrt(9))  # Wurzel ziehen
+# print (math.pi)   
+
+#-------------------------------------------------
+
+# JSON Bearbeitung
+
+# data = {                                #  dies ist im Moment ein dict mit key-value Paaren.
+#     "name" : "Dieter",
+#     "age" : 25,
+#     "tel" : "02345"
+# }
+# json_string = json.dumps(data)
+
+# for key, value in data.items():
+#     print(key, ":", value)
+
+#-------------------------------------------------
+
+# mit venve lassen virtuelle Umgebungen erstellen
+# mit deactivate wird solch eine Umgebung wieder ausgeschaltet.
+# um eine virtuelle Umgebung zu erstellen, scheibt man "python -m venv mytest" im terminal.
+
+#-------------------------------------------------
+
+# mot open() lassen sich Dateien öffnen oder auch neu erstellen falls diese Datei noch nicht existiert.
+# x = open('demofile.txt', 'b')# dies öffnet die Datei im binary mode, "r" für reading, ACHTUNG -> "w" für write. Dies überschreibt.
+# Dann kann man mit read() die Datei lesen.
+
+# wenn man nur eine Zeile lesen möchte, dann nutzt man    readline()
+# um so öfter readline() hintereinander aufgerufen wird, um so mehr Zeilen werden ausgelesen.
+
+# wenn man "x" einsetzt, wird einem ein eventueller Fehler auch gemeldet.
+
+# um Dateien zu löschen, benötigt man das os Modul.
+# mit    os.remove() lassen sich Dateien löschen.
+# mit    os.rmdir()  wird ein ganzer Ordner gelöscht.
+# Achtung, um einen Ordner mit os zu löschen, muß dieser leer sein!!!!!
+
 
