@@ -289,6 +289,7 @@ import json
 # print(multiply(2,3,4,5))
 
 #-------------------------------------------------
+# WWW3 schools
 
 # Datetime Bearbeitung ,dazu muß man datetime importieren
 
