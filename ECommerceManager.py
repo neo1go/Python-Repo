@@ -1,6 +1,6 @@
 import uuid
 import csv
-
+import os   # zum Löschen von Dateien 
 
 class InventoryItem:
     def __init__(self, item_id, name, quantity, price):
@@ -80,9 +80,18 @@ class InventoryManager:
     def filter_items(self, max_price):
         return [item for item in self.inventory if item.price <= max_price]
 
-
+    
+    def delete_file(self):
+     if os.path.exists("inventory.csv"):
+        os.remove("inventory.csv")
+     else:
+         print("The file does not exist")
+       
+       
+    
+    
 def main():
-    store = InventoryManager("inventory.cvs")     # hier wird die Datei erstellt
+    store = InventoryManager("inventory.csv")     # hier wird die Datei erstellt
     store.load_inventory()                        # grundsätzlich erstmal laden
     
     while True:
@@ -92,7 +101,8 @@ def main():
         print("3. Filter items by price")
         print("4. Delete an item by ID")
         print("5. Save Inventory")
-        print("6. Exit")
+        print("6. Delete whole file")
+        print("7. Exit")
         
         option = input("Enter your choice (1-6): ")
         
@@ -124,12 +134,15 @@ def main():
             store.save_inventory()
             print("Saved to CSV") 
         
-        
         elif option == "6":
+            store.delete_file()
+            
+        elif option == "7":
             print("Good bye") 
             break
         else:
             print("Invalid option. Please enter a number between 1 and 6.")
+
 
 if __name__ == "__main__":
     main()
