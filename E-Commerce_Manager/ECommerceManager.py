@@ -138,7 +138,7 @@ def main():
             store.delete_file()
             
         elif option == "7":
-            print("Good bye") 
+            print("Good Bye") 
             break
         else:
             print("Invalid option. Please enter a number between 1 and 6.")

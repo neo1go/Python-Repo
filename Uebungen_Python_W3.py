@@ -336,7 +336,7 @@ import json
 
 #-------------------------------------------------
 
-# mot open() lassen sich Dateien öffnen oder auch neu erstellen falls diese Datei noch nicht existiert.
+# mit open() lassen sich Dateien öffnen oder auch neu erstellen, falls diese Datei noch nicht existiert.
 # x = open('demofile.txt', 'b')# dies öffnet die Datei im binary mode, "r" für reading, ACHTUNG -> "w" für write. Dies überschreibt.
 # Dann kann man mit read() die Datei lesen.
 
@@ -348,6 +348,6 @@ import json
 # um Dateien zu löschen, benötigt man das os Modul.
 # mit    os.remove() lassen sich Dateien löschen.
 # mit    os.rmdir()  wird ein ganzer Ordner gelöscht.
-# Achtung, um einen Ordner mit os zu löschen, muß dieser leer sein!!!!!
+# Achtung, um einen Ordner mit os zu löschen, muß dieser leer sein!!!!!???
 
 

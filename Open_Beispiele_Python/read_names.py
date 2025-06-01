@@ -7,4 +7,4 @@ with open("names.txt") as file:          # "r" is default
                                          # aber so kann man modularer arbeiten.
                                          
 for name in sorted(namesList,reverse=True):          # hier wird sortiert.
-    print(f"hello, {name}")
+    print(f"Hello, {name}")
