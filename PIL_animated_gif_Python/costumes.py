@@ -12,7 +12,7 @@ for arg in sys.argv[1:]:# hier werden die Bilder von außen eingefügt und dnn n
     images.append(image)
 
 
-images[0].save(
+images[0].save(      # hier werden die Bilder angehangen und gespeichert
     "costumes.gif", save_all=True, append_images=images[1:], duration=200, loop=0
 )
 
