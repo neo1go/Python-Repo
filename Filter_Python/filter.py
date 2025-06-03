@@ -14,6 +14,6 @@ for grade in passing_grades:
 #passing_grades = list(filter(is_passing, grades))   #typecasting zu List
 #print(passing_grades)   # mittels Typecasting kann man dann sofort ausgeben.
 
-lambda_version_passing_grades = filter(lambda gr: gr >= 60, grades)
-for lvpg in lambda_version_passing_grades:
-    print(f"Lambda Version: {lvpg}")
+lambda_version_passing_grades = filter(lambda grade: grade >= 60, grades)
+for passing_grade in lambda_version_passing_grades:
+    print(f"Lambda Version: {passing_grade}")

@@ -330,7 +330,7 @@ import json
 
 #-------------------------------------------------
 
-# mit venve lassen virtuelle Umgebungen erstellen
+# mit venv lassen virtuelle Umgebungen erstellen
 # mit deactivate wird solch eine Umgebung wieder ausgeschaltet.
 # um eine virtuelle Umgebung zu erstellen, scheibt man "python -m venv mytest" im terminal.
 
