@@ -3,7 +3,7 @@ import time # dadurch kann man die Zeit sekundenweise anzeigen
 import datetime  # mit diesem Modul kann man eine String Repräsentation der Zeit anzeigen lassen
 import pygame
 import threading
-import msvcrt  # prüft nicht-blockierend ob eine Taste gedrückt wurde
+import msvcrt  # prüft nicht-blockierend, ob eine Taste gedrückt wurde
 
 
 
