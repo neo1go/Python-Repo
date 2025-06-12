@@ -1,7 +1,7 @@
 # a gif is a combination of a number or images that are shown in succesion , sometimes in a loop.
 import sys
 
-from PIL import Image       # pip install pillow
+from PIL import Image       # pip install pillow  # Pill läuft nicht wegen einer zu neuen Version, die noch nicht mit PIL kompatibel ist. 
 
 
 images = []   # die Liste, auf die dann zugegriffen wird
