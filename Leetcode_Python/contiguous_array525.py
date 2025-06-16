@@ -1,3 +1,5 @@
+# Leetcode 525
+
 # Achtung -> die -1 wird in dieser Aufgabe quasi für fast 3 unterschiedliche Funktionalitäten genutzt:
 # als Startindex, um bei -1 neutral anzufangen
 # als Austausch für alle Nullen im  gegebenen Array was dann dazu führt dass ->
@@ -7,7 +9,7 @@
 def contiguous_array(nums):
     new_nums = [-1 if c == 0 else 1 for c in nums] # damit werden alle 0 zu -1
     hash_map ={0:-1}   # Key 0 an Startindex -1,. Das ist verwirrend da die -1 nicht die current_sum zum Ausgleichen darstellt sondern einfach den technischen Startwert 
-    # für das Array. WEnn also eine ausbalancierte Sequenz am Anfang beginnt, dann kann mit -1 direkt die korrekte Länge berrechnet werden.
+    # für das Array. Wenn also eine ausbalancierte Sequenz am Anfang beginnt, dann kann mit -1 direkt die korrekte Länge berrechnet werden.
     current_sum = 0 # dies ist der Key, an dessen mehrmaligem versuchten Eintragen in das dict(stellvertretend für den Graphen), dann die maximale Länge ermittelt werden kann. 
     # Also immer, wenn ein Key schon vorhanden ist im dict, misst man (Das ist das Auftauchen des gleichen Wertes im Graphen, egal ob im Plus oder Minus Bereich) 
     # vom aktuellen Index bis zum ersten Index mit dem selben Wert die Länge.
@@ -18,7 +20,7 @@ def contiguous_array(nums):
         current_sum += new_nums[i] # hier passiert die wichtige Addition oder Subtraktion im Falle von -1. Dies entspricht dem Auf und Ab in einem Graphen
         if current_sum in hash_map: # wenn key schon in hashmap vorhanden ist, dann:
             prev_index = hash_map[current_sum] # das ist der Index des erstmaligen Auftauchens des Wertes im Dict, so easy.
-            max_length = max(max_length, i - prev_index)# bererechnet die Maximallänge anhand des Index des ersten Auftauchens im dict mit dem aktuellen Index
+            max_length = max(max_length, i - prev_index) # bererechnet die Maximallänge anhand des Index des ersten Auftauchens im dict mit dem aktuellen Index
         else:
             hash_map[current_sum] = i 
     return max_length
