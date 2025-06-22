@@ -1,4 +1,4 @@
-# Aggregation ist eine Beziehung von Objekten zueinander, bei der die Teile ohne das Ganze existieren können.
+# Aggregation ist eine Beziehung von Objekten zueinander, bei der die Teile ohne das Ganze existieren können. ('has a' Relationship, also "kann")
 # Ein Objekt dient als Container(das Ganze) für die anderen Objekte (Teile). Dabei kann das Ganze auch ohne die Teile
 # existieren und umgekehrt. 
 
@@ -37,3 +37,6 @@ print(library.name)
 
 for book in library.list_books():
     print(book)
+    
+
+# Hier der Unterschied zu der Komposition. Wenn man das library Objekt zerstören würde, dann würden die book Objekte immer noch existieren.
