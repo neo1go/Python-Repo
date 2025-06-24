@@ -2,6 +2,7 @@
 # Aufgabe ist, das Subarray mit dem größten Produkt zu finden.
 class Solution:
     # Kadane's Algorithm
+
     # 2 Pointer laufen gegenläufig und berechnen jeweils die Produkte links oder rechts von einer potentiellen Null.
     # Es werden nur deswegen 2 Pointer genutzt weil es eine ungerade Anzahl an Minus-Vorzeichen geben kann.
     # Dies führt zu unterschiedlichen Ergebnissen.
@@ -9,6 +10,7 @@ class Solution:
     # [2,-5,-2,-4,3]
     # von l nach r : 2*-5 =-10 *-2 = 20 * -4 = -80 * 3 = -240 , also max ist (20)
     # von r nach l : -4 *3 = -12 * -2 = 24 * -5 = -120 * 2 = -240 , also max ist (24)
+    
     
     def max_product(self, nums):
         n =len(nums)

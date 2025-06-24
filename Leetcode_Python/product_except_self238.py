@@ -20,6 +20,7 @@
 
 class Solution(object):    
     """
+    # Brute Force mit 2 Schleifen
     def productExceptSelf(self, nums):
         result = []  
         n = len(nums)

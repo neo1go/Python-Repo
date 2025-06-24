@@ -16,19 +16,22 @@ def print_row(row):
 
 def get_payout(row, bet):
     if row[0] == row[1] == row[2]:
-        if row[0] == "🍒":
-            return bet * 3
-        elif row[0] == "🍉":
-            return bet * 4
-        elif row[0] == "🍋":
-            return bet * 5
-        elif row[0] == "🔔":
-            return bet * 10
-        elif row[0] == "⭐":
-            return bet * 20
-    return 0   
-        
-        
+       match row[0]:
+           case "🍒":
+               return bet * 3
+           case "🍉":
+               return bet * 4
+           case "🍋":
+               return bet * 5
+           case "🔔":
+               return bet * 10
+           case "⭐":
+               return bet * 20
+           case _:
+               return 0
+    
+    return 0     # jede Methode in python gibt einen Wert zurück, Ist dieser nicht definiert, so wird "None" zurückgegeben. Das führt zu Problemen.
+                 # Deswegen wird hier 0 zurückgegeben - der Daten-Typ ist hier entscheidend.
 def main():
     balance = 100
     

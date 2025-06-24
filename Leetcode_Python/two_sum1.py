@@ -12,7 +12,7 @@ class Solution(object):
 # dies ist die Variante mit einem Hashset.         
     def two_Sum_Hash(self, nums, target):  
           num_map = {}
-          for i, num in enumerate(nums):
+          for i, num in enumerate(nums):   # i ist der Index und num ist der Wert an der Index Stelle. Enumerate ist wie range(len(nums)), aber kürzer.
             complement = target - num
             if complement in num_map:
                 return [num_map[complement], i]
