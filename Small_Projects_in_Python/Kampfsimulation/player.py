@@ -3,19 +3,24 @@ class Player:
     def __init__(self, nickname, weapon):
         self.__nickname = nickname
         self.__health = 100
-        self.weapon = weapon
+        self.__weapon = weapon
 
-    @property
+    @property # Getter
     def nickname(self):
         return self.__nickname
 
-    @property
-    def health(self):
+    @property # Getter
+    def health(self): 
         return self.__health
 
-    @property
+    @property # Getter 
     def alive(self):
         return self.health > 0
+    
+    @property
+    def weapon(self):
+        return self.__weapon
+
 
     def attack(self, target, multiplier=1):
         damage = self.weapon.damage * multiplier

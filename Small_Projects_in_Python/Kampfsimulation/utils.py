@@ -21,7 +21,7 @@ def battle(sp1, sp2):
         damage_mulitplier = random_damage_multiplier()
         damage = weapon_damage * damage_mulitplier
         
-        name1 = attacker.nickname.upper()
+        name1 = attacker.nickname.upper() 
         name2 = defender.nickname.upper()
         
         hp1 = attacker.health

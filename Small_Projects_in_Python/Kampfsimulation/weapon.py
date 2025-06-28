@@ -6,7 +6,7 @@ class Weapon:
         
     @property
     def name(self):
-        return self.__name
+        return self.__name 
     
     @property
     def damage(self):

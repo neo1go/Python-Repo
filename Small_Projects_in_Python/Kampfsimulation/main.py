@@ -8,4 +8,4 @@ weapon2 = Weapon("Axt", 14)
 player1 = Player("Leonidas", weapon1)
 player2 = Player("Herkules", weapon2)
 
-battle(player1,player2)
+battle(player1,player2)  
