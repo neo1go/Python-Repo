@@ -3,12 +3,12 @@
 # Wird der Wert nicht gefunden, returned man -1
 # Es gibt eine Brute Force Variante, die alle Zahlen durchläuft und sehr ineffizient ist.
 # Die andere Möglichkeit ist binary search.
-# Der einzige Unterschied ist, das der Übergang mit behandelt werde muß.
-#
+# Der einzige Unterschied ist, das der Übergang mit behandelt werden muß.
+#  
 # z.B.
 # [2,3,4,0,1] target = 0   man landet beim ersten Halbieren auf 4, was größer ist und muß 
 # eigentlich nur in Erfahrung bringen, ob alles ascending ist(left<mid<right). 
-# Ansonsten wird der linke oder, je nachdem, der rechte Pointer anders gesetzt als üblich.
+# Ansonsten wird der linke oder, je nachdem, der rechte Pointer gegenteilig gesetzt zur üblichen Vorgehensweise.
 
 
 class Solution(object):
