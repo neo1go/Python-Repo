@@ -17,7 +17,7 @@ class Player:
     def alive(self):
         return self.health > 0
     
-    @property
+    @property # Getter
     def weapon(self):
         return self.__weapon
 
@@ -26,7 +26,7 @@ class Player:
         damage = self.weapon.damage * multiplier
         target.get_damage(damage)  # hier wird get_damage direkt aufgerufen zur Berechnung auf dem Ziel.
 
-    def get_damage(self, damage):
+    def get_damage(self, damage):  # Setter für __health, eine interne Klassenmethode, die Änderungen an __health vornehmen darf.
         self.__health -= damage
         if self.__health < 0:
             self.__health = 0

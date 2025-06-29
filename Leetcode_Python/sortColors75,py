@@ -1,0 +1,24 @@
+# Leetcode 75 Sort Colors
+# dutch national flag problem
+# Das besondere an der Aufgabe ist, das der mid pointer der laufende Pointer ist. Er verteilt die Werte nach links oder rechts.
+# Erst dann wird der linke oder rechte Pointer neu gesetzt. Diese beiden Pointer reagieren also nur auf den mid Wert mit dem sie getauscht werden. 
+class Solution(object):
+    def sort_colors(self, nums):
+        left = 0   # left ist nur für Nullen zuständig
+        right = len(nums)-1  # right ist nur für Zweien zuständig
+        mid = 0
+
+        while mid <= right:
+           if nums[mid] == 0:
+               nums[left], nums [mid] = nums[mid], nums[left]
+               left += 1
+               mid += 1
+           elif nums[mid] == 1:
+               mid += 1
+           else: # bedeutet automatisch nums[mid] == 2, ist etwas schneller (nanosekunden), da kein weiterer Vergleich stattfindet (==).
+               nums[mid], nums[right] = nums[right], nums[mid]
+               right -= 1
+        return nums
+
+nums = [1,2,2,0,0,1,2]
+print(f"{Solution().sort_colors(nums)}")
