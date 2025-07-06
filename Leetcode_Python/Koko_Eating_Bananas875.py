@@ -39,7 +39,7 @@ class Solution(object):
              
       
 piles = [30,11,23,4,20]    
-#piles = [3,6,7,11]
+#piles = [3,6,7,11]  # h = 8
 h = 6
 
 print(Solution().minEatingSpeed(piles, h))
