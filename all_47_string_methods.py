@@ -140,15 +140,78 @@ print(table)   #Übersetzungstabelle, die für sich alleine noch nicht nutzbar i
 print(text28.translate(table))
 
 #30 partition()
-text29: str = 'a+b=c'
-print(text29.partition('='))   # es wird der String in drei Bereiche aufgeteilt und das Gleichheitszeichen ist das Trennzeichen zwischen den beiden Seiten.
+text30: str = 'a=b=c'
+print(text30.partition('='))   # es wird der String in drei Bereiche aufgeteilt und das Gleichheitszeichen ist das Trennzeichen zwischen den beiden Seiten.
 
 #31 removeprefix()
-text30: str = 'Wazzap'
-print(text30.removeprefix('Waz'))
+text31: str = 'Wazzap'
+print(text31.removeprefix('Waz'))
 
 #32 removesuffix()
-text31: str = 'Mister Everyone'
-print(text31.removesuffix('one'))
+text32: str = 'Mister Everyone'
+print(text32.removesuffix('one'))
 
-#33
+#33 replace()
+text33: str = 'Remember to scream now or scream later.'
+print(text33.replace('scream', 'whisper', 1))   # die Zahl bestimmt, wie häufig der String ersetzt wird. Mit -1 werden alle getauscht.
+
+#34 rfind()  # das erste Auftreten des chars , von rechts gesehen, wird als Positionszahl angegeben.
+text34: str = 'A: Some text A'
+position = text34.rfind('A')     # es wird also das letzte A im String gefunden und die Position in Index Schritten angegeben. Bei nichtfinden wird -1 ausgegeben.
+print(position)
+
+#35 rindex()  # dies macht das Gleiche wie rfind() mit dem einen Unterschied, dass ein Error entsteht und kein -1 bei Nichtfinden.
+text35: str = 'B: Some text. B'
+position = text35.rindex('B')      # auch Groß und Kleinschreibung sind zu beachten.
+print(position)
+
+#36 rjust()
+text36: str = 'text'
+print(text36.rjust(20, '_'))  # rechtsseitige Ausrichtung mit Auffüllen der vorherigen Abstands-Werte.
+
+#37 rpartition()  #fängt von der rechten Seite aus an, die Aufteilung vorhzunehmen. Also bleiben 1 und 2 zusammen. Bei partition() würde von links angefangen werden.
+text37: str = 'text=text2=text3'
+print(text37.rpartition('='))  #          '=' ist der Trenner.
+
+#38 rsplit() & #39 split()
+text38: str = 'This is some special stuff.'  # rsplit fängt von rechts aus an und nutzt in diesem Fall ein Leerzeichen als Trenner, um eine neue List mit den Einzeleinträgen zu erstellen. 
+print(text38.rsplit(sep=' '))
+
+text38_2: str = 'www.website.com'
+print(text38_2.rsplit(sep='.'))
+
+#------- split()
+text39: str = 'This is some special stuff.' # das gleiche wie rsplit mit dem Unterschied, dass von links angefangen wird.
+print(text39.split(maxsplit=2))  # Anzahl der Elemente, die gesplittet werden sollen. Wenn kein Trennchar angegeben wird, werden Leerzeichen genommen.
+
+#40 rstrip()   schneidet string, von rechter Seite aus gesehen, ab.
+text40: str = 'His name is Mario Mario'
+print(text40.rstrip('Mario'))
+
+#41 splitlines()  # erstellt eine List mit den aufgetrennten Werten des Strings. Escape Zeichen werden als Trenner gedeutet.
+text41: str = 'Remember to comment!\nor else...\n'
+print(text41.splitlines(keepends=True)) # mit dem keepends wird definiert, ob man die Escape Chars mit darstellt oder weglässt.
+
+#42 startswith()
+text42: str = 'Luigi'
+print(text42.startswith('F'))  # gibt bool als Antwort zurück.
+
+#43 strip()  # entfernt einen einzelnen String aus dem gesamten String.
+text43: str = 'Luigi has pasta.'
+print(text43.strip('Luigi'))
+
+#44 swapcase()   # dreht die Grössenverhältnisse um, also Gross wird zu klein und umgekehrt.
+text44: str = 'Luigi has pasta.'
+print(text44.swapcase())
+
+#45 title()  # damit wird jeder erste Buchstabe eines Wortes gross geschrieben.
+text45: str = 'this is a title.'
+print(text45.title())
+
+#46 upper()   # alles wird  gross geschrieben.
+text46: str = 'hello there!'
+print(text46.upper())
+
+#47 zfill()  # fügt Nullen in gewünschter Anzahl hinzu am Anfang des Strings.
+text47: str = 'text'
+print(text47.zfill(20))
