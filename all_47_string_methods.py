@@ -215,3 +215,4 @@ print(text46.upper())
 #47 zfill()  # fügt Nullen in gewünschter Anzahl hinzu am Anfang des Strings.
 text47: str = 'text'
 print(text47.zfill(20))
+
