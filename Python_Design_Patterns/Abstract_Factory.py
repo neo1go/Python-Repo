@@ -29,6 +29,7 @@ class Italian_Drink(IDrink):
     def serve_drink(self):
         return 'Italian Vine.'
         
+ 
         
 class IFood_Factory(ABC):
     
@@ -60,7 +61,7 @@ class American_Factory(IFood_Factory):
         
         
 
-def get_food_order(factory: IFood_Factory):
+def get_food_order(factory: IFood_Factory):  # factory ist eine konkrete Instanz einer der Klassen (z.B. Italian_Factory etc), die dann die Methoden implementieren.
     """
     Simuliert die Bestellung von Pizza und Getränken über eine Fabrik. Instanzen werden hier erstellt.
     """
@@ -77,7 +78,7 @@ def main():
     Hauptfunktion zur Demonstration der Abstract Factory Methode.
     """
     print("Bestellung von italienischem Essen:")
-    get_food_order(Italian_Factory())
+    get_food_order(Italian_Factory())   # hier sind Argumente eingetragen
 
     print("\nBestellung von amerikanischem Essen:")
     get_food_order(American_Factory())
