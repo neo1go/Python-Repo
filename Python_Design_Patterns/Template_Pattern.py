@@ -67,7 +67,7 @@ def main():
         beverage.prepare_recipe()
 
     
-# Kurzschreibweise mit Comprehension, bei der keine Generator-Methode benötigt wird.
+# Kurzschreibweise mit Comprehension, bei der keine extra Generator-Methode benötigt wird.
    # for beverage in (b() for b in [Tea, Coffee]):
    # beverage.prepare_recipe()
 
