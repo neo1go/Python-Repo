@@ -3,18 +3,21 @@ from scheibe import ganz_gross, gross, mittel, klein, ganz_klein
 from turm import Turm
 from darstellung import Darstellung
 from hanoi_solver import verschiebe
+import pygame
 
-turm_a = Turm("A")
+
+turm_a = Turm("A")  # jeder Turm hat eine eigene Liste scheiben mit Scheiben
 turm_b = Turm("B")
 turm_c = Turm("C")
 
+
+# Startturm (links größte Scheibe)
 turm_a.scheiben = [ganz_gross, gross, mittel, klein, ganz_klein]
 
 darstellung = Darstellung()
 
 # Anfangszustand anzeigen
 darstellung.zeichne(turm_a, turm_b, turm_c)
-import pygame
 pygame.time.delay(1000)
 
 # Nach jedem Zug die Darstellung aktualisieren

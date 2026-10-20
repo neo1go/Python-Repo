@@ -2,11 +2,10 @@
 
 from scheibe import Scheibe
 
-
 class Turm:
     def __init__(self, name: str):
         self.name = name 
-        self.scheiben: list[Scheibe] = []
+        self.scheiben: list[Scheibe] = []  # Diese Sammlung von Scheiben ergibt jeweils einen Turm
     
         
 

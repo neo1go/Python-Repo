@@ -1,4 +1,3 @@
-from scheibe import Scheibe
 
 
 def verschiebe(anzahl, start, ziel, mitte, nach_zug=None):
