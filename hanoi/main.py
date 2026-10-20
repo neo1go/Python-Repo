@@ -22,11 +22,11 @@ def aktualisiere():
     darstellung.animations_schritt(turm_a, turm_b, turm_c)
 
 verschiebe(
-    len(turm_a.scheiben),
+    len(turm_a.scheiben),   # Anzahl der Scheiben kann variieren
     turm_a,
     turm_c,
     turm_b,
-    aktualisiere
+    aktualisiere  # Besonderheit, es wird die Funktion direkt übergeben ohne sie direkt auszuführen
 )
 
 # Endzustand anzeigen und Fenster offen halten
