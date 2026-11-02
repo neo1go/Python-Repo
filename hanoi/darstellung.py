@@ -58,7 +58,7 @@ class Darstellung:
             
             pygame.draw.rect(
                 self.screen,
-                self.scheiben_farbe,
+                scheibe.farbe,
                 (x - breite // 2, y, breite, scheiben_hoehe - 2),
                 border_radius=4
             )
